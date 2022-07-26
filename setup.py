@@ -10,17 +10,17 @@ DESCRIPTION = '\n\n'.join(LOAD_TEXT(_) for _ in [
 ])
 
 setup(
-  name = 'lazyemployee',                # Name project the same with folder
-  packages = ['lazyemployee'],          # Name project the same with folder
-  version = '0.0.5',                 # 
+  name = 'lazyearth',                # Name project the same with folder
+  packages = ['lazyearth'],          # Name project the same with folder
+  version = '0.0.6',                 # 
   license='MIT', 
-  description = 'lazyemployee learning to upload to PyPI',    #Show on PyPi
+  description = 'Library OOP for workwith odc by Tun Kedsaro',    #Show on PyPi
   long_description=DESCRIPTION,
   author = 'Tun Kedsaro',            #          
   author_email = 'Tun.k@ku.th',      #
-  url = 'https://github.com/Tun555/Lazyemployee',  #
-  download_url = 'https://github.com/Tun555/Lazyemployee/archive/refs/tags/v0.0.2.zip',                                      #  
-  keywords = ['OOP','Employee'],      # When someone search
+  url = 'https://github.com/Tun555/lazyearth',  #
+  download_url = 'https://github.com/Tun555/lazyearth/archive/refs/tags/v0.0.1.zip',                                      #  
+  keywords = ['OOP','ODC'],      # When someone search
   install_requires=[                 # Package that use
         'numpy',
         'matplotlib',
