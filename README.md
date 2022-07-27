@@ -1,5 +1,5 @@
 # LazyEarth
-## Library OOP for workwith odc by Tun Kedsaro
+## Library OOP for workwith odc 
 
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
