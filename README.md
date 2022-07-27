@@ -17,7 +17,7 @@ P.S. This version is not complete. (Writing in a hurry) Just need to bring conce
 
 ## Tech
 
-lazyemployee uses a number of open source projects to work properly:
+lazyearth uses a number of open source projects to work properly:
 
 - Python
 
