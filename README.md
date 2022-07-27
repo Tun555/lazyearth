@@ -42,7 +42,7 @@ from lazyearth import objearth
 
 
 
-![Screenshot](example1.GIF)
+![Screenshot](GraphicalAbstract.JPG)
 
 [STEP 2]
 img = objearth(mosaic0.blue)
