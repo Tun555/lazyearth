@@ -4,7 +4,7 @@
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-PyPI: https://pypi.org/search/?q=lazyemployee
+PyPI: https://pypi.org/project/lazyearth/
 ## Features
 
 - plotshow
@@ -30,7 +30,7 @@ Open CMD / Terminal
 pip install lazyearth
 ```
 
-### วิธีใช้
+### How to use
 
 [STEP 1]
 - Open IDLE and typing
@@ -53,7 +53,7 @@ from lazyearth import objearth
 ## License
 
 MIT
-**Free Software, Hell Yeah!**
+
 
 Develop by : Tun Kedsaro
 
