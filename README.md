@@ -42,10 +42,11 @@ from lazyearth import objearth
 
 
 
+![Screenshot](example1.GIF)
 
 [STEP 2]
-- Create class objearth
-- img.plotshow()
+img = objearth(mosaic0.blue)
+img.plotshow()
 
 
 
