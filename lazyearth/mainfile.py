@@ -1,72 +1,72 @@
-class Employee():
-    minsalary = 12000
-    maxsalary = 300000
-    companyname = 'gistda'
-    def __init__(self,name,job,salary):
-        self.name=name
-        self.job = job
-        self.salary = salary
-    def detail(self):
-        print("Name    : {}".format(self.name))
-        print("job     : {}".format(self.job))
-        print("salary  : {}".format(self.salary))
-    def setname(self,newname):
-        self.name=newname
-    def setjob(self,newjob):
-        self.job=newjob
-    def setsalary(self,newsalary):
-        self.salary=newsalary
-    def getname(self):
-        return self.name
-    def getjob(self):
-        return self.job
-    def getsalary(self):
-        return self.salary
-    def CalculateSalary(self,bonus=0,overtime=0):
-        return (self.salary+bonus+overtime)
+import numpy
+import xarray
+import matplotlib.pyplot as plt
 
-class Accounting(Employee):
-    Accouniden = "Accounting"
-    def __init__(self,name,salary,age):
-        super().__init__(name,self.Accouniden,salary)
-        self.age = age
-    def detail(self):
-        super().detail()
-        print('Age     : {}'.format(self.age))
 
-class Programmer(Employee):
-    programmeriden = "programmer"
-    def __init__(self,name,salary,exp,skill):
-        super().__init__(name,self.programmeriden,salary)
-        self.exp = exp
-        self.skill = skill
-    def detail(self):
-        super().detail()
-        print("exp     : {}".format(self.exp))
-        print("skill   : {}".format(self.skill))
+class objearth():
+    def __init__(self,DataArray):
+        self.DataArray = DataArray
+        
+    def plotshow(self,lst=True):
+        self.lst = lst
+        if type(self.DataArray) == xarray.core.dataarray.DataArray:
+            if self.lst==True:
+                ymax = 0 ; ymin = self.DataArray.shape[0]
+                xmin = 0 ; xmax = self.DataArray.shape[1] 
+            else:
+                ymax = self.lst[0] ; ymin = self.lst[1]
+                xmin = self.lst[2] ; xmax = self.lst[3]
+            lon  =  self.DataArray.longitude.to_numpy()[xmin:xmax]
+            lon0 =  lon[0] ; lon1 =  lon[-1]
+            lat  =  self.DataArray.latitude.to_numpy()[ymax:ymin]
+            lat0 = -lat[-1] ; lat1 = -lat[0]
+            def longitude(lon):
+                return [lon0,lon1]
+            def latitude(lat):
+                return [lat0,lat1]
+            def axis(x=0):
+                return x
+            fig,ax = plt.subplots(constrained_layout=True)
+            fig.set_size_inches(7,7)
+            ax.set_xlabel('x axis size')
+            ax.set_ylabel('y axis size')
+            ax.imshow(self.DataArray[ymax:ymin,xmin:xmax],extent=[xmin,xmax,ymin,ymax])
+            secax_x = ax.secondary_xaxis('top',functions=(longitude,axis))
+            secax_x.set_xlabel('longitude')
+            secax_x = ax.secondary_xaxis('top',functions=(longitude,axis))
+            secax_x.set_xlabel('longitude')
+            secax_y = ax.secondary_yaxis('right',functions=(latitude,axis))
+            secax_y.set_ylabel('latitute')
+            plt.grid(color='w', linestyle='-', linewidth=0.1)
+            plt.show()
+        
+        elif type(self.DataArray) == numpy.ndarray:
+            if self.lst==True:
+                ymax = 0 ; ymin = self.DataArray.shape[0]
+                xmin = 0 ; xmax = self.DataArray.shape[1]
+            else:
+                ymax = self.lst[0] ; ymin = self.lst[1]
+                xmin = self.lst[2] ; xmax = self.lst[3]
+            plt.figure(figsize=(10,10))
+            plt.imshow(self.DataArray[ymax:ymin,xmin:xmax],extent=[xmin,xmax,ymin,ymax])
+        
+        else:
+            print("Nonetype :",type(self.DataArray))
+            
+    def NDVI(self):
+        red = xarray.where(self.DataArray.red==-9999,numpy.nan,self.DataArray.red)
+        nir = xarray.where(self.DataArray.nir==-9999,numpy.nan,self.DataArray.nir)
+        ndvi1 = (nir-red)/(nir+red).to_numpy()
+        ndvi3 = numpy.clip(ndvi1,-1,1)
+        im_ratio = ndvi3.shape[1]/ndvi3.shape[0]
+        plt.figure(figsize=(8,8))
+        plt.xticks([]), plt.yticks([])
+        plt.imshow(ndvi3,cmap='viridis')
+        plt.clim(-1,1)
+        plt.colorbar(orientation="vertical",fraction=0.0378*im_ratio)
+        plt.show()
+        return ndvi3
 
-class Sale(Employee):
-    saleiden = "Sale"
-    def __init__(self,name,salary,area):
-        super().__init__(name,self.saleiden,salary)
-        self.area = area
-    def detail(self):
-        super().detail()
-        print("Area    : {}".format(self.area))
-
-if __name__=="__main__":
-    obj1= Employee('Tun','sleeper',2000)
-    obj1.detail()
-    print(obj1.CalculateSalary(2000,4000))
-    print("\n")
-
-    obj2= Accounting('Nan',20000,23)
-    obj2.detail()
-    print("\n")
    
-    obj3= Programmer('Xan',20000,3,'Python')
-    obj3.detail()
-    print("\n")
     
-    obj4= Sale('lin',20000,"A901")
-    obj4.detail()
+

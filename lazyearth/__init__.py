@@ -1,1 +1,1 @@
-from lazyemployee.mainfile import Employee,Accounting,Programmer,Sale
+from lazyearth.mainfile import objearth

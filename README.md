@@ -8,12 +8,12 @@ PyPI: https://pypi.org/search/?q=lazyemployee
 ## Features
 
 - plotshow
+- NDVI
 
-โปรแกรมแชทนี้เป็นโปรแกรมที่เขียนขึ้นมาโดยใช้ Python โดยการเขียนแบบ OOP สำหรับใช้งานในการสร้าง class ต่างๆ อย่างรวดเร็ว เพียงแค่มี Python อยู่ในคอมพิวเตอร์ก็สามารถใช้งานได
+This program is written using Python. Writing by OOP for use in creating classes quickly, just have Python 3.8 on the computer can be used.
 
 
-
-ปล. เวอร์ชั่นนี้ยังไม่สมบูรณ์ (เขียนแบบรีบๆ) เขียนเพื่อนำ concept OOP มาสร้าง library แล้วก็ upload ขึ้น Github กับ PyPI ต่อไป สำหรับนักพัฒนาสามารถนำ Source Code ไปพัฒนาต่อได้เต็มที่ ซึ่งก็คืออีกโปรเจคนึ่งนั้นแหละ เพราะว่า jupyter มันไม่สามารถ import def ได้เหมือนกับตัว คอมก็เลยใช้วิธีนี้เอา และก็ยังมีอีกหลาย library ที่เขียนดองเอาไว้
+P.S. This version is not complete. (Writing in a hurry) Just need to bring concept OOP to create library and then upload to Github and PyPI.For developers, the source code can be fully developed. Which is another project, The main reason that i create this because jupyter can't import def like the computer so uses this method. And there are also many libraries that have been preserved.
 
 ## Tech
 
@@ -24,7 +24,7 @@ lazyemployee uses a number of open source projects to work properly:
 
 ## Installation
 
-เปิด CMD / Terminal
+Open CMD / Terminal
 
 ```python
 pip install lazyearth
@@ -33,10 +33,10 @@ pip install lazyearth
 ### วิธีใช้
 
 [STEP 1]
-- เปิด IDLE ขึ้นมาแล้วพิมพ์...
+- Open IDLE and typing
 
 ```python
-from lazyearth import plotshow
+from lazyearth import objearth
 ```
 
 
@@ -44,7 +44,8 @@ from lazyearth import plotshow
 
 
 [STEP 2]
-- ประกาศ class plotshow(img)
+- Create class objearth
+- img.plotshow()
 
 
 

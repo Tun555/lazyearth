@@ -12,14 +12,14 @@ DESCRIPTION = '\n\n'.join(LOAD_TEXT(_) for _ in [
 setup(
   name = 'lazyearth',                # Name project the same with folder
   packages = ['lazyearth'],          # Name project the same with folder
-  version = '0.0.6',                 # 
+  version = '0.0.15',                 # 
   license='MIT', 
   description = 'Library OOP for workwith odc by Tun Kedsaro',    #Show on PyPi
   long_description=DESCRIPTION,
   author = 'Tun Kedsaro',            #          
   author_email = 'Tun.k@ku.th',      #
   url = 'https://github.com/Tun555/lazyearth',  #
-  download_url = 'https://github.com/Tun555/lazyearth/archive/refs/tags/v0.0.1.zip',                                      #  
+  download_url = 'https://github.com/Tun555/lazyearth/archive/refs/tags/v0.0.6.zip',                                      #  
   keywords = ['OOP','ODC'],      # When someone search
   install_requires=[                 # Package that use
         'numpy',
@@ -29,13 +29,7 @@ setup(
     'Development Status :: 3 - Alpha',     
     'Intended Audience :: Developers',   
     'Topic :: Software Development :: Build Tools',
-    'License :: OSI Approved :: MIT License',   # Version pathon that we test 
-    'Programming Language :: Python :: 3',      
-    'Programming Language :: Python :: 3.4',
-    'Programming Language :: Python :: 3.5',
-    'Programming Language :: Python :: 3.6',
-    'Programming Language :: Python :: 3.7',
+    'License :: OSI Approved :: MIT License',   # Version pathon that we test    
     'Programming Language :: Python :: 3.8',
-    'Programming Language :: Python :: 3.9',
   ],
 )
