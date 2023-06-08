@@ -1,9 +1,12 @@
 (Lazyearth) Library OOP for workwith odc
+.. image:: /logo/logo3.svg
+   :height: 100px
+   :width: 200 px
+   :scale: 100 %
+   :alt: alternate text
+   :align: center
 
-
-
-
-For developers, the source code can be fully developed. Which is another project, because jupyter can't import def like it does. So the computer uses this method. And there are also many libraries that have been preserved.
+the source code can be fully developed. Which is another project, because jupyter can't import def like it does. So the computer uses this method. And there are also many libraries that have been preserved.
 
 
 
