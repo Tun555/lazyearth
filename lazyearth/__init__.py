@@ -1,13 +1,14 @@
-# If there are this code in orther local have to use 
-# from lazyearth.mainfile import objearth
-# from lazyearth.mainfile import water
-
-from lazyearth.mainfile import objearth
-from lazyearth.mainfile import water
-from lazyearth.mainfile import imagedataset
+from lazyearth.common import objearth
+from lazyearth.rsi import index
+from lazyearth.virtual import *
+from lazyearth.water import water
+from lazyearth.cloud import *
 
 __author__  = 'tul kedsaro'
 __email__   = 'Tun.k@ku.th'
-__version__ = '1.0.44'
-print(f'Lazyearth version : {__version__} Krub')
+# # Test vrsion
+# __version__ = '0.1.5'
+# # Publish version
+__version__ = '1.0.55'
 
+print(f'Lazyearth version : {__version__} Krub')

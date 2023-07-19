@@ -1,3 +1,22 @@
+Metadata-Version: 2.1
+Name: lazyearth
+Version: 1.0.55
+Summary: Python earth science package
+Home-page: https://github.com/Tun555/lazyearth
+Download-URL: https://github.com/Tun555/lazyearth/archive/refs/tags/v0.0.15.zip
+Author: Tun Kedsaro
+Author-email: Tun.k@ku.th
+License: MIT
+Keywords: geo,oepn data cube,earth
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: LICENSE.txt
+
 <img src="https://lazyearth.org/logo/logo_on_PyPI.svg" width=100%>
 
 # Lazyearth: Python earth science package

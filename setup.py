@@ -2,33 +2,28 @@
 from os.path import abspath, dirname, join
 from setuptools import setup,find_packages
 
-
-# HERE = dirname(abspath(__file__))
-# LOAD_TEXT = lambda name: io.open(join(HERE, name), encoding='UTF-8').read()
-# DESCRIPTION = '\n\n'.join(LOAD_TEXT(_) for _ in [
-#     'README.rst'
-# ])
-
-this_directory = abspath(dirname(__file__))
-with open(join(this_directory, 'README.md'), encoding='utf-8') as f:
-    long_description = f.read()
+HERE = dirname(abspath(__file__))
+LOAD_TEXT = lambda name: io.open(join(HERE, name), encoding='UTF-8').read()
+DESCRIPTION = '\n\n'.join(LOAD_TEXT(_) for _ in [
+    'README.md'
+])
 
 setup(
-  name = 'lazyearth',                # Name project the same with folder
-  packages = ['lazyearth'],          # Name project the same with folder
-  version = '1.0.44',                 # version
+  name = 'lazyearth',                 # Name project the same with folder
+  packages = ['lazyearth'],           # Name project the same with folder
+  version = '1.0.55',                 # version
   license='MIT', 
   description = 'Python earth science package',    #Show on PyPi
-  long_description=long_description,
-  long_description_content_type='text/markdown',  # This is important!
-  author = 'Tun Kedsaro',            #          
-  author_email = 'Tun.k@ku.th',      #
+  long_description=DESCRIPTION,
+  long_description_content_type='text/markdown',  # Add this line
+  author = 'Tun Kedsaro',             #          
+  author_email = 'Tun.k@ku.th',       #
   url = 'https://github.com/Tun555/lazyearth',  #
   download_url = 'https://github.com/Tun555/lazyearth/archive/refs/tags/v0.0.15.zip',                                      #  
   keywords = ['geo','oepn data cube','earth'],      # When someone search
   # Dont add any library bz It's gonna error waiting
-  include_package_data=True,         # Create another file (models)
-  install_requires=[                 # Package that use
+  include_package_data=True,          # Create another file (models)
+  install_requires=[                  # Package that use
         'numpy',
         'matplotlib'
     ],  
