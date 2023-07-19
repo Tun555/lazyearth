@@ -12,7 +12,6 @@ Lazyearth is a Python package that offers ease and speed in analyzing geospatial
 <li>PyPI : <a href="https://pypi.org/project/lazyearth/">https://pypi.org/project/lazyearth/</a></li>
 <li>Mailing : <a href="Tun.k@ku.th">Tun.k@ku.th</a></li>
 <li>Bug reports : <a href="https://github.com/Tun555/lazyearth/issues">https://github.com/Tun555/lazyearth/issues</a></li>
-<li>learn : <a href="https://lazyearth.org/install/learn/">https://lazyearth.org/install/learn</a></li>
 </ul>
 
 ## Installation
